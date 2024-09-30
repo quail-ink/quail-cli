@@ -22,7 +22,6 @@ $ quail-cli [command]
 
 ### Available Commands
 
-- **completion**: Generate the autocompletion script for the specified shell.
 - **help**: Get help about any command.
 - **login**: Authenticate with Quail using OAuth.
 - **me**: Retrieve current user information.
@@ -95,7 +94,7 @@ This is the body of the post.
 This is the last section of the post.
 ```
 
-### Publish/Unpublish/Deliver/Delete a Post
+#### Publish/Unpublish/Deliver/Delete a Post
 
 ```bash
 $ quail-cli post publish -l your_list_slug -p your_post_slug
@@ -124,18 +123,18 @@ $ quail-cli --config /path/to/config.yaml
 ### Configuration File Example
 
 ```yaml
-# do not modify `app` section, quail-cli will manage it.
+# DO NOT modify `app` section, quail-cli will manage it.
 app:
-    access_token: ""
-    expiry: ""
-    refresh_token: ""
-    token_type: ""
+  access_token: ""
+  expiry: ""
+  refresh_token: ""
+  token_type: ""
 post:
-    # frontmatter_mapping is used to map the frontmatter keys
-    # for this example:
-    # you can use`featureImage` in the frontmatter and it will be mapped to `cover_image_url`
-    frontmatter_mapping:
-        cover_image_url: featureImage
+  # frontmatter_mapping is used to map the frontmatter keys
+  # for this example:
+  # you can use`featureImage` in the frontmatter and it will be mapped to `cover_image_url`
+  frontmatter_mapping:
+    cover_image_url: featureImage
 ```
 
 ## Contributing
